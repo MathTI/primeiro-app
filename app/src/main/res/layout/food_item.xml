@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout principal -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Criando um card alinhando com o container principal e definindo um id-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/containerImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Adicionando imagem no card, ajustando e criando id-->
+        <ImageView
+            android:id="@+id/imgFood"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:src="@drawable/food1"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <!--Criando o textview do nome do produto, alinhando ao final do containerImg
+    passando parâmetros altura e largura não definidas, tamanho da letra, cor, estilo
+    e passando texto através da referência @string/food1 -->
+
+    <TextView
+        android:id="@+id/txtFoodName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/food1"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintStart_toEndOf="@id/containerImg"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <!--Criando o textview da descrição, alinhando ao final do containerImg, abaixo do txtFoodName
+     e ao final do cardview. Passando parâmetros altura não definida, largura total da tela
+     (ajustando através das margens), tamanho da letra, cor, estilo e passando texto através da referência @string/food1 -->
+
+    <TextView
+        android:id="@+id/txtFoodDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/description1"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintStart_toEndOf="@id/containerImg"
+        app:layout_constraintTop_toBottomOf="@id/txtFoodName"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$50.00"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toEndOf="@id/containerImg"
+        app:layout_constraintTop_toBottomOf="@id/txtFoodDescription"
+        />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/addcard"
+        app:layout_constraintStart_toEndOf="@id/txtPrice"
+        app:layout_constraintTop_toBottomOf="@id/txtFoodDescription"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

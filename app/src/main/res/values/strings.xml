@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PrimeiroAppDio</string>
+    <string name="food1">Porção de Batata Frita e Frango Empanado</string>
+    <string name="description1">Desfrute de batatas fritas crocantes, douradas por fora e macias por dentro, acompanhadas de frango empanado suculento com uma crosta crocante e temperada. Complemente com seu molho favorito, como ketchup, maionese ou barbecue. Uma combinação perfeita para um lanche delicioso ou uma refeição rápida!</string>
+    <string name="addcard">Adicionar no carrinho</string>
+</resources>
